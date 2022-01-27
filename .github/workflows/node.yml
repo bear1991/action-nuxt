@@ -30,7 +30,7 @@ jobs:
           port: ${{ secrets.PORT }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          source: .nuxt,static,nuxt.config.js,package.json
+          source: .nuxt/*,static/*,nuxt.config.js,package.json
           target: /usr/local/app/actions-nuxt/
 
       - name: start package
