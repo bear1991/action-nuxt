@@ -30,9 +30,9 @@ jobs:
           port: ${{ secrets.PORT }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          source: ./.nuxt,./static,./nuxt.config.js,./package.json
+          source: .nuxt,static,nuxt.config.js,package.json
           target: /usr/local/app/actions-nuxt/
-      
+
       - name: start package
         uses: appleboy/ssh-action@master
         with:
@@ -42,5 +42,4 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             cd /usr/local/app/actions-nuxt
-            npm install
-            pm2 start npm --name "github-action-nuxt" -- run start
+            ./start.sh
