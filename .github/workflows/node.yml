@@ -22,7 +22,6 @@ jobs:
         run: |
           npm install
           npm run build
-#          tar -zcvf release.tgz .nuxt,static,nuxt.config.js,package.json
           tar -zcvf release.tgz .nuxt
 
 #      - name: deploy package
