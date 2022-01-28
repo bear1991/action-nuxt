@@ -11,7 +11,7 @@
   "config": {
     "nuxt": {
       "host": "0.0.0.0",
-      "post": 4040
+      "post": 5050
     }
   },
   "dependencies": {
